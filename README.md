@@ -1,2 +1,20 @@
-# ScrollMark
-スクロール位置を記憶しておくChrome拡張機能です。
+# ScrollMark  
+![ロゴ](logo.svg)  
+スクロール位置を記憶しておくChrome拡張機能です。  
+## 参考にしたサイト  
+https://hacknote.jp/archives/21892/  
+https://itsakura.com/javascript-removeeventlistener  
+https://note.com/yamanoborer/n/n2e4cc40328b7  
+https://gray-code.com/javascript/get-mouse-cursor-position-coordinate/  
+https://golang.hateblo.jp/entry/browser-extension-addon-messaging  
+https://qiita.com/punkshiraishi/items/d8f4a0072a9430f7da23  
+https://thenewsinpu.hatenablog.jp/entry/2018/06/21/233248  
+https://qiita.com/FrogApp/items/cd64894721a0e4723047  
+https://dackdive.hateblo.jp/entry/2017/07/27/100000  
+https://gray-code.com/javascript/remove-specified-html-element/  
+https://thenewsinpu.hatenablog.jp/entry/2018/06/21/233248  
+https://pisuke-code.com/javascript-use-json-methods/  
+https://developer.chrome.com/docs/extensions/reference/action/  
+https://developer.chrome.com/docs/extensions/reference/contextMenus/  
+https://developer.chrome.com/docs/extensions/reference/storage/  
+https://developer.mozilla.org/ja/docs/Web/JavaScript/Reference/Operators/Conditional_Operator  

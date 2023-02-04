@@ -1,6 +1,10 @@
 # ScrollMark  
 ![ロゴ](logo.svg)  
 スクロール位置を記憶しておくChrome拡張機能です。  
+## 使い方
+画面を右クリックするか、URLボックス右に出る拡張機能のアイコンをクリックすることでマークを追加できます。
+ラベルを入力するよう求められるので入力してください。
+マークを削除したいときは、マークを長押ししてください。
 ## 参考にしたサイト  
 https://hacknote.jp/archives/21892/  
 https://itsakura.com/javascript-removeeventlistener  

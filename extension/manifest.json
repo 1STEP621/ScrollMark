@@ -1,0 +1,23 @@
+{
+  "name": "ScrollMark",
+  "description": "スクロールした量を記憶します。",
+  "version": "1.0.0",
+  "manifest_version": 3,
+  "content_scripts": [{
+    "matches": ["<all_urls>"],
+    "js": ["main.js"],
+    "css": ["style.css"]
+  }],
+  "background": {
+    "service_worker": "background.js"
+  },
+  "action": {},
+  "permissions": [
+    "storage",
+    "unlimitedStorage",
+    "contextMenus"
+  ],
+  "icons": {
+    "128": "icon.png"
+  }
+}

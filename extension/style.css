@@ -9,6 +9,7 @@
   overflow: hidden;
   z-index: 2147483647;
   pointer-events: none;
+  user-select: none;
 }
 
 #extension_addBtn {

@@ -111,7 +111,8 @@ function main() {
       let markY = scrollY / (document.documentElement.scrollHeight - innerHeight) * (innerHeight - 36) || 0
       const opacity = firstState ? 1 : 0
       const visibility = firstState ? "visible" : "hidden"
-      markBar.insertAdjacentHTML("afterbegin", `<div class="extension_mark" style="top: ${markY}px; opacity: ${opacity}; visibility: ${visibility};" data-scroll="${scrollY}" data-id="${id}">${label}</div>`);
+      markBar.insertAdjacentHTML("afterbegin", `<div class="extension_mark" style="top: ${markY}px; opacity: ${opacity}; visibility: ${visibility};" data-scroll="${scrollY}" data-id="${id}"></div>`);
+      document.querySelector(`.extension_mark[data-id="${id}"]`).textContent = label;
     }
 
     function recfgEventListeners() {

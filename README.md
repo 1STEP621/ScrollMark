@@ -23,3 +23,6 @@ https://developer.chrome.com/docs/extensions/reference/contextMenus/
 https://developer.chrome.com/docs/extensions/reference/storage/  
 https://developer.mozilla.org/ja/docs/Web/JavaScript/Reference/Operators/Conditional_Operator  
 https://qiita.com/yuu_1st/items/c02355ea1e138a55cf3e  
+https://developer.mozilla.org/ja/docs/Web/JavaScript/Reference/Operators/Logical_OR_assignment  
+https://developer.mozilla.org/ja/docs/Web/JavaScript/Reference/Operators/Nullish_coalescing_assignment  
+https://developer.mozilla.org/ja/docs/Web/JavaScript/Reference/Operators/Logical_OR  

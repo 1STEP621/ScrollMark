@@ -5,14 +5,12 @@ addEventListener("load", main);
 function main() {
   const GCStorage = chrome.storage.local
   GCStorage.get(location.href, (res) => {
-    const markBarHTML = '<div id="extension_markBar"></div></div>'
-    document.body.insertAdjacentHTML("beforeend", markBarHTML);
+    document.body.insertAdjacentHTML("beforeend", '<div id="extension_markBar"></div></div>');
     const markBar = document.getElementById("extension_markBar")
     markBar.style.height = innerHeight + "px"
     let marks
 
-    let markData = res[location.href] ? res[location.href] : []
-    console.table(markData);
+    let markData = res[location.href] ?? []
     loadMarkData(markData, false);
 
     let holdTime = 0
@@ -36,7 +34,7 @@ function main() {
     function changeMarkData() {
       if (preUrl !== location.href) {
         GCStorage.get(location.href, (res) => {
-          markData = res[location.href] ? res[location.href] : []
+          markData = res[location.href] ?? []
           markBar.innerHTML = ""
           loadMarkData(markData, false);
         });
@@ -47,20 +45,19 @@ function main() {
     function addMark() {
       let label = prompt("ラベルを入力してください", "Mark")
       if (label == null) return;
-      if (label == "") label = "Mark"
+      label ||= "Mark"
 
       markData.push([scrollY, label]);
       markBar.innerHTML = ""
       loadMarkData(markData, true);
-    
+
       GCStorage.set(JSON.parse(`{"${location.href}":${JSON.stringify(markData)}}`));
     }
 
     function checkHold() {
       holdTime = 0;
-      //clearInterval(checkHoldIntvl);
+      clearInterval(checkHoldIntvl);
       checkHoldIntvl = setInterval(checkHoldAndDeleteMark, 100, this.elem);
-      console.log("checkhold is started.");
     }
 
     function cancelCheckHold() {
@@ -111,8 +108,7 @@ function main() {
     }
 
     function addMarkElem(scrollY, label, id, firstState) {
-      let markY = scrollY / (document.documentElement.scrollHeight - innerHeight) * (innerHeight - 36)
-      if (isNaN(markY)) markY = 0
+      let markY = scrollY / (document.documentElement.scrollHeight - innerHeight) * (innerHeight - 36) || 0
       const opacity = firstState ? 1 : 0
       const visibility = firstState ? "visible" : "hidden"
       markBar.insertAdjacentHTML("afterbegin", `<div class="extension_mark" style="top: ${markY}px; opacity: ${opacity}; visibility: ${visibility};" data-scroll="${scrollY}" data-id="${id}">${label}</div>`);

@@ -40,6 +40,7 @@
   right: 0;
   text-align: center;
   text-overflow: ellipsis;
+  white-space: nowrap;
   overflow: hidden;
   background-color: #f4f5f74d;
   color: #4e7682;
